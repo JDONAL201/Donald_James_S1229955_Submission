@@ -1,0 +1,404 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height= "match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/darksteel"
+    android:id="@+id/relative_container"
+    android:windowSoftInputMode="adjustNothing">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@drawable/gradient">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="39"
+        android:id="@+id/mapContainer">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:id="@+id/fullScreenBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@color/darksteel"
+            android:src="@drawable/ic_action_fullscreen"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="James Donald S1229955"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/josefin_sans_light"
+            android:textColor="#fff"/>
+       </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:background="@color/darksteel"
+        android:id="@+id/searchContainer">
+
+        <SearchView
+            android:id="@+id/mapSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded"
+            android:iconifiedByDefault="false"
+            android:queryHint="Trip destination" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:id="@+id/dateContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dateEntry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:textAlignment="center"
+                android:hint="Select Date"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:fontFamily="@font/josefin_sans_light"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:background="@color/darksteel"
+                 />
+
+            <TextView
+                android:id="@+id/clearFilters"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:textAlignment="center"
+                android:hint="Clear Filters"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:fontFamily="@font/josefin_sans_light"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:background="@color/darksteel"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/listContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="49"
+        android:background="@color/darksteel">
+
+                <ExpandableListView
+                    android:id="@+id/expandableListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                </ExpandableListView>
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+</RelativeLayout>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:id="@+id/constraint_container">-->
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/map"-->
+<!--        android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        tools:context=".HomeActivity"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="-4dp" />-->
+
+<!--    <SearchView-->
+<!--        android:id="@+id/mapSearch"-->
+<!--        android:layout_width="208dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:background="@drawable/rounded"-->
+<!--        android:iconifiedByDefault="false"-->
+<!--        android:queryHint="Search..."-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/map"-->
+<!--        app:layout_constraintVertical_bias="0.018" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/roadworkdBtn"-->
+<!--        android:layout_width="140dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/roundcorners"-->
+<!--        android:drawableTop="@drawable/ic_action_mapicon"-->
+<!--        android:fontFamily="@font/josefin_sans_light"-->
+<!--        android:text="Live Roadworks"-->
+<!--        android:textColor="#ffffff"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.059"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/incidentsBtn" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/incidentsBtn"-->
+<!--        android:layout_width="140dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="520dp"-->
+<!--        android:background="@drawable/roundcorners"-->
+<!--        android:drawableTop="@drawable/ic_action_mapicon"-->
+<!--        android:fontFamily="@font/josefin_sans_light"-->
+<!--        android:text="Live Incidents"-->
+<!--        android:textColor="#ffffff"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.059"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/plannedBtn"-->
+<!--        android:layout_width="140dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/roundcorners"-->
+<!--        android:drawableTop="@drawable/ic_action_mapicon"-->
+<!--        android:fontFamily="@font/josefin_sans_light"-->
+<!--        android:text="Planned work"-->
+<!--        android:textColor="#ffffff"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.059"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/roadworkdBtn"-->
+<!--        app:layout_constraintVertical_bias="0.361" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/toolbar"-->
+<!--        layout="@layout/toolbar"></include>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--OOLDDDD BELOW-!>
+    <!-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="fill_parent"-->
+    <!--    android:layout_height="fill_parent"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:orientation="vertical"-->
+    <!--    tools:context=".HomeActivity"-->
+    <!--    android:background="@drawable/gradient"-->
+    <!--    android:baselineAligned="false">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_weight="0.2">-->
+
+    <!--        <SearchView-->
+    <!--            android:id="@+id/mapSearch"-->
+    <!--            android:layout_width="300dp"-->
+    <!--            android:layout_height="20dp"-->
+    <!--            android:background="@drawable/rounded"-->
+    <!--            android:iconifiedByDefault="false"-->
+    <!--            android:queryHint="Search..."-->
+    <!--             />-->
+
+    <!--        <fragment-->
+    <!--            android:id="@+id/map"-->
+    <!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            tools:context=".HomeActivity"-->
+    <!--            />-->
+
+
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_weight = "0.80">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/incidentsBtn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/roundcorners"-->
+    <!--            android:drawableTop="@drawable/ic_action_mapicon"-->
+    <!--            android:fontFamily="@font/josefin_sans_light"-->
+    <!--            android:text="Live Incidents"-->
+    <!--            android:textColor="#ffffff" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/roadworkdBtn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/roundcorners"-->
+    <!--            android:drawableTop="@drawable/ic_action_mapicon"-->
+    <!--            android:fontFamily="@font/josefin_sans_light"-->
+    <!--            android:text="Live Roadworks"-->
+    <!--            android:textColor="#ffffff" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/plannedBtn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/roundcorners"-->
+    <!--            android:drawableTop="@drawable/ic_action_mapicon"-->
+    <!--            android:fontFamily="@font/josefin_sans_light"-->
+    <!--            android:text="Planned work"-->
+    <!--            android:textColor="#ffffff" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="fill_parent"-->
+<!--    android:layout_height="fill_parent"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".HomeActivity"-->
+<!--    android:background="@drawable/gradient">-->
+
+<!--    <include-->
+<!--            android:id="@+id/toolbar"-->
+<!--            layout="@layout/toolbar"></include>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight ="0.65"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        >-->
+
+<!--        <fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--            xmlns:tools="http://schemas.android.com/tools"-->
+<!--            android:id="@+id/map"-->
+<!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:context=".HomeActivity" />-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight ="0.35">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_height="match_parent"-->
+<!--            >-->
+
+
+<!--            <Button-->
+<!--                android:id="@+id/incidentsBtn"-->
+<!--                android:layout_width="140dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/roundcorners"-->
+<!--                android:drawableStart="@drawable/ic_action_mapicon"-->
+<!--                android:fontFamily="@font/josefin_sans_light"-->
+<!--                android:text="Live Incidents"-->
+<!--                android:textAlignment="viewStart"-->
+<!--                android:textColor="#ffffff" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/roadworkdBtn"-->
+<!--                android:layout_width="140dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/roundcorners"-->
+<!--                android:drawableStart="@drawable/ic_action_mapicon"-->
+<!--                android:fontFamily="@font/josefin_sans_light"-->
+<!--                android:text="Live Roadworks"-->
+<!--                android:textAlignment="viewStart"-->
+<!--                android:textColor="#ffffff" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/plannedBtn"-->
+<!--                android:layout_width="140dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/roundcorners"-->
+<!--                android:drawableStart="@drawable/ic_action_mapicon"-->
+<!--                android:fontFamily="@font/josefin_sans_light"-->
+<!--                android:text="Planned Roadwork"-->
+<!--                android:textAlignment="viewStart"-->
+<!--                android:textColor="#ffffff" />-->
+
+
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->

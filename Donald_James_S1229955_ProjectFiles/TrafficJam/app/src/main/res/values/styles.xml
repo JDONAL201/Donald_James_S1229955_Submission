@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darksteel</item>
+        <item name="colorPrimaryDark">@color/darksteel</item>
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="CustomToolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="CustomPopup" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">#ffffff</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:fontFamily">@font/josefin_sans_light</item>
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+    </style>
+
+    <style name="DatePicker1" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/darksteel</item>
+        <item name="android:fontFamily">@font/josefin_sans_light</item>
+    </style>
+</resources>
